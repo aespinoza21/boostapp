@@ -15,16 +15,24 @@ class VistaPresentacion extends StatefulWidget {
 class _VistaPresentacionState extends State<VistaPresentacion> {
   Widget wActual = Landing();
   @override
-  Widget build(BuildContext context) {
-     var future2 = new Future.delayed(const Duration(milliseconds: 4100), (){
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    var future2 = new Future.delayed(const Duration(milliseconds: 4100), (){
       setState(() {
         wActual = vistaLogin();
       });
     });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Bootslife',
       theme: ThemeData(),
       home: Scaffold(
+        /*resizeToAvoidBottomInset: false,*/
         body: wActual,
       ),
     );
