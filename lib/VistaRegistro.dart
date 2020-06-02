@@ -231,33 +231,41 @@ class vistaLogin extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 10.0),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 50.0),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pushReplacement(
+                              new MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      vistaLogin()));
+                        },
                         child: Container(
-                          height: 37.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5.0),
-                            color: Color(0xFF51B955),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.verified_user,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 20.0,
-                              ),
-                              Text(
-                                "Registrate",
-                                style: TextStyle(
+                          padding: EdgeInsets.symmetric(horizontal: 50.0),
+                          child: Container(
+                            height: 37.0,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5.0),
+                              color: Color(0xFF51B955),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.verified_user,
                                   color: Colors.white,
-                                  fontSize: 18.0,
-                                  fontFamily: 'NarrowRegular',
                                 ),
-                              ),
-                            ],
+                                SizedBox(
+                                  width: 20.0,
+                                ),
+                                Text(
+                                  "Registrate",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18.0,
+                                    fontFamily: 'NarrowRegular',
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
