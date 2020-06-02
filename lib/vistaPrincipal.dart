@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:boostapp/vistaAlimentos.dart';
+import 'package:boostapp/vistaRecetas.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -105,15 +106,24 @@ class _vistaPrincipalState extends State<vistaPrincipal> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(bottom: 30.0, right: 20.0),
-                        child: Text(
-                          "Recetas",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: "NarrowBold",
-                            fontSize: 38.0,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => vistaRecetas(),),
+                          );
+                        },
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(bottom: 30.0, right: 20.0),
+                          child: Text(
+                            "Recetas",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "NarrowBold",
+                              fontSize: 38.0,
+                            ),
                           ),
                         ),
                       ),

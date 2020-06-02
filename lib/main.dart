@@ -6,9 +6,11 @@ import 'package:boostapp/VistaRegistro.dart';
 import 'dart:ui';
 import 'package:async/async.dart';
 import 'VistaLogin.dart';
+import 'push_notifications.dart';
 
 void main() => runApp(VistaPresentacion());
 
+PushNotificationsManager myNotifi = new PushNotificationsManager();
 class VistaPresentacion extends StatefulWidget {
   @override
   _VistaPresentacionState createState() => _VistaPresentacionState();
@@ -18,6 +20,7 @@ class _VistaPresentacionState extends State<VistaPresentacion> {
   Widget wActual = Landing();
   @override
   void initState() {
+    myNotifi.init();
     // TODO: implement initState
     super.initState();
     var future2 = new Future.delayed(const Duration(milliseconds: 4100), () {
