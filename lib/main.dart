@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:boostapp/vistaPrincipal.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animations/loading_animations.dart';
 import 'package:boostapp/VistaRegistro.dart';
@@ -25,7 +26,7 @@ class _VistaPresentacionState extends State<VistaPresentacion> {
     super.initState();
     var future2 = new Future.delayed(const Duration(milliseconds: 4100), () {
       setState(() {
-        wActual = menuPrincipal(this); //vistaLogin();
+        wActual = vistaPrincipal(); //vistaLogin();
       });
     });
   }

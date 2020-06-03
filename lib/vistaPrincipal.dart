@@ -4,6 +4,7 @@ import 'package:boostapp/vistaAlimentos.dart';
 import 'package:boostapp/vistaRecetas.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'globales.dart';
 
 class vistaPrincipal extends StatefulWidget {
   @override
@@ -67,7 +68,7 @@ class _vistaPrincipalState extends State<vistaPrincipal> {
                   ),
                   Center(
                       child: Text(
-                    "Total de alimentos: 0",
+                        (tipolistaglobal == 1)? "Total de alimentos: 15" : "Total de alimentos: 15",
                     style: TextStyle(
                         fontFamily: "NarrowRegular",
                         fontSize: 19.0,
@@ -78,7 +79,7 @@ class _vistaPrincipalState extends State<vistaPrincipal> {
                   ),
                   Center(
                       child: Text(
-                    "Alimentos caducados: 0",
+                        (tipolistaglobal == 1)? "Alimentos caducados: 1": "Alimentos caducados: 1",
                     style: TextStyle(
                       fontFamily: "NarrowRegular",
                       fontSize: 19.0,
@@ -90,7 +91,7 @@ class _vistaPrincipalState extends State<vistaPrincipal> {
                   ),
                   Center(
                       child: Text(
-                    "Próximos a caducar: 0",
+                        (tipolistaglobal == 1)? "Próximos a caducar: 0": "Próximos a caducar: 0",
                     style: TextStyle(
                       fontFamily: "NarrowRegular",
                       fontSize: 19.0,

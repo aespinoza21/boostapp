@@ -37,7 +37,7 @@ class _vistaRecetasState extends State<vistaRecetas> {
                   ),
                   Center(
                     child: Text(
-                      "Alimentos",
+                      "Recetas",
                       style: TextStyle(
                         fontFamily: "PacificoRegular",
                         fontSize: 40.0,

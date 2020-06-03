@@ -1,5 +1,6 @@
 import 'package:boostapp/globales.dart';
 import 'package:boostapp/tomarFoto.dart';
+import 'package:boostapp/vistaPrincipal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -55,7 +56,7 @@ class _vistaAlimentosState extends State<vistaAlimentos> {
                     scrollDirection: Axis.vertical,
                     child: Column(
                       children:
-                          (tipolistaglobal == 1) ? listaTipo1 : listaTipo2,
+                          (tipolistaglobal == 1) ? listaTipo2 : listaTipo2,
                     ),
                   ),
                   SizedBox(
@@ -93,10 +94,13 @@ class _vistaAlimentosState extends State<vistaAlimentos> {
             ),
             Positioned(
               left: 20.0,
-              top: 20.0,
+              top: 30.0,
               child: InkWell(
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.of(context).pushReplacement(
+                      new MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              vistaPrincipal()));
                 },
                 child: Icon(
                   Icons.arrow_back,
@@ -219,15 +223,7 @@ class _vistaAlimentosState extends State<vistaAlimentos> {
         ),
       ),
     ),
-    Align(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        "Leche",
-        style: TextStyle(
-          fontFamily: "NarrowRegular",
-        ),
-      ),
-    ),
+
     Align(
       alignment: Alignment.centerLeft,
       child: Text("Pan de barra",
@@ -400,6 +396,15 @@ class _vistaAlimentosState extends State<vistaAlimentos> {
               color: Colors.white,
             ),
           ),
+        ),
+      ),
+    ),
+    Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        "Leche",
+        style: TextStyle(
+          fontFamily: "NarrowRegular",
         ),
       ),
     ),

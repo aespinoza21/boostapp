@@ -1,3 +1,4 @@
+import 'package:boostapp/VistaLogin.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -193,6 +194,7 @@ class vistaLogin extends StatelessWidget {
                               ),
                               Container(
                                   child: TextFormField(
+                                    obscureText: true,
                                 focusNode: _contrasenaFocus,
                                 controller: _contrasenaController,
                                 textInputAction: TextInputAction.go,
@@ -236,7 +238,7 @@ class vistaLogin extends StatelessWidget {
                           Navigator.of(context).pushReplacement(
                               new MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      vistaLogin()));
+                                      vistaInicioSesion()));
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(horizontal: 50.0),
